@@ -1,5 +1,9 @@
 package io.github.flea777.library.repository;
 
-public interface BookRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import io.github.flea777.library.model.entities.BookEntity;
+
+public interface BookRepository extends JpaRepository<Long, BookEntity>{
 
 }
