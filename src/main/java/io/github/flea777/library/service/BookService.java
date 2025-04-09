@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import io.github.flea777.library.model.entities.BookEntity;
+import io.github.flea777.library.model.entities.Book;
 import io.github.flea777.library.repository.BookRepository;
 import jakarta.persistence.EntityNotFoundException;
 
@@ -13,23 +13,21 @@ public class BookService {
 
   private BookRepository repository;
 
-  public List<BookEntity> findAll() {
+  public List<Book> findAll() {
     return repository.findAll();
   }
 
-  public BookEntity findById(Long id) {
+  public Book findById(Long id) {
     return repository.findById(id)
       .orElseThrow(() -> new EntityNotFoundException("Livro não encontrado"));
   }
 
-  public BookEntity insert(BookEntity data) {
-    // Implementar método
-    return null;
+  public Book insert(Book data) {
+    return repository.save(data);
   }
 
-  public BookEntity update(Long id, BookEntity newData) {
-    // Implementar método
-    return null;
+  public Book update(Long id, Book newData) {
+
   }
 
   public void delete(Long id) {

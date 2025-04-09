@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table
-public class BookEntity {
+public class Book {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +20,7 @@ public class BookEntity {
   private String publisher;
   private Boolean isAvailable;
 
-  public BookEntity(String _name, String _author, String _publisher) {
+  public Book(String _name, String _author, String _publisher) {
     name = _name;
     author = _author;
     publisher = _publisher;
@@ -50,8 +50,8 @@ public class BookEntity {
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
-    if (!(o instanceof BookEntity)) return false;
-    BookEntity that = (BookEntity) o;
+    if (!(o instanceof Book)) return false;
+    Book that = (Book) o;
     return Objects.equals(id, that.id);
   }
 

@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.github.flea777.library.model.entities.BookEntity;
+import io.github.flea777.library.model.entities.Book;
 import io.github.flea777.library.service.BookService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -25,22 +25,22 @@ public class BookController {
   private BookService service;
 
   @GetMapping()
-  public List<BookEntity> findAll() {
+  public List<Book> findAll() {
     return service.findAll();
   }
 
   @GetMapping("/{id}")
-  public BookEntity findById(@PathVariable Long id) {
+  public Book findById(@PathVariable Long id) {
     return service.findById(id);
   }
 
   @PostMapping()
-  public BookEntity insert(@RequestBody BookEntity data) {
+  public Book insert(@RequestBody Book data) {
       return service.insert(data);
   }
 
   @PutMapping("/{id}")
-  public BookEntity update(@PathVariable Long id, @RequestBody BookEntity newData) {
+  public Book update(@PathVariable Long id, @RequestBody Book newData) {
       return service.update(id, newData);
   }
 
