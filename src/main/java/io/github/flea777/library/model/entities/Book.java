@@ -29,6 +29,8 @@ public class Book {
     isAvailable = true;
   }
 
+  public Book() {}
+
   public Long getId() {
     return id;
   }
