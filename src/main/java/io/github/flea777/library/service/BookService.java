@@ -27,7 +27,8 @@ public class BookService {
   }
 
   public Book update(Long id, Book newData) {
-
+    // Implementar método
+    return null;
   }
 
   public void delete(Long id) {

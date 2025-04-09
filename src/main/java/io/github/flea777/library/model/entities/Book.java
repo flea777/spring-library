@@ -16,12 +16,14 @@ public class Book {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String name;
+  private String isbn;
   private String author;
   private String publisher;
   private Boolean isAvailable;
 
-  public Book(String _name, String _author, String _publisher) {
+  public Book(String _name, String _isbn, String _author, String _publisher) {
     name = _name;
+    isbn = _isbn;
     author = _author;
     publisher = _publisher;
     isAvailable = true;
@@ -35,6 +37,10 @@ public class Book {
     return name;
   }
 
+  public String getIsbn() {
+    return isbn;
+  }
+
   public String getAuthor() {
     return author;
   }
@@ -43,7 +49,7 @@ public class Book {
     return publisher;
   }
 
-  public Boolean getIsAvailable() {
+  public Boolean isAvailable() {
     return isAvailable;
   }
 
