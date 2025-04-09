@@ -2,6 +2,7 @@ package io.github.flea777.library.model.entities;
 
 import java.util.Objects;
 
+import io.github.flea777.library.dto.BookCreateDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,11 +22,11 @@ public class Book {
   private String publisher;
   private Boolean isAvailable;
 
-  public Book(String _name, String _isbn, String _author, String _publisher) {
-    name = _name;
-    isbn = _isbn;
-    author = _author;
-    publisher = _publisher;
+  public Book(BookCreateDTO dto) {
+    name = dto.name();
+    isbn = dto.isbn();
+    author = dto.author();
+    publisher = dto.publisher();
     isAvailable = true;
   }
 

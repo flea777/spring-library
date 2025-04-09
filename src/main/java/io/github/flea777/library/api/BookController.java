@@ -6,7 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.github.flea777.library.model.entities.Book;
+import io.github.flea777.library.dto.BookCreateDTO;
+import io.github.flea777.library.dto.BookDTO;
 import io.github.flea777.library.service.BookService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,18 +24,18 @@ public class BookController {
   private BookService service;
 
   @GetMapping()
-  public List<Book> findAll() {
+  public List<BookDTO> findAll() {
     return service.findAll();
   }
 
   @GetMapping("/{id}")
-  public Book findById(@PathVariable Long id) {
+  public BookDTO findById(@PathVariable Long id) {
     return service.findById(id);
   }
 
   @PostMapping()
-  public Book insert(@RequestBody Book data) {
-      return service.insert(data);
+  public BookDTO insert(@RequestBody BookCreateDTO dto) {
+      return service.insert(dto);
   }
 
   @DeleteMapping
