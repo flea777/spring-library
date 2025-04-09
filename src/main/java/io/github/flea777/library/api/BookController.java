@@ -38,12 +38,7 @@ public class BookController {
   public Book insert(@RequestBody Book data) {
       return service.insert(data);
   }
-
-  @PutMapping("/{id}")
-  public Book update(@PathVariable Long id, @RequestBody Book newData) {
-      return service.update(id, newData);
-  }
-
+  
   @DeleteMapping
   public void delete(@PathVariable Long id) {
     service.delete(id);
