@@ -38,7 +38,7 @@ public class BookController {
       return service.insert(dto);
   }
 
-  @DeleteMapping
+  @DeleteMapping("/{id}")
   public void delete(@PathVariable Long id) {
     service.delete(id);
   }
