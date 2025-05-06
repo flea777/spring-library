@@ -96,3 +96,6 @@ Screencast unit test: https://youtu.be/qb-HXiQMhDo
 O diagrama abaixo mostra a arquitetura completa do sistema, indo da interface com o usuário (React) até a persistência no banco de dados (PostgreSQL).
 ![Captura de tela 2025-04-09 220640](https://github.com/user-attachments/assets/ea0672e5-549d-4fcf-aa0d-965c4cfd9999)
 
+## Histórias dos usuários:
+https://trello.com/b/7g8W8zI4/sistema-de-gerenciamento-de-livros
+
